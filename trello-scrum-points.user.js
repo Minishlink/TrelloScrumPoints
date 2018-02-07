@@ -74,13 +74,14 @@
       }
 
       if (points !== null) {
+        const roundedPoints = Math.round(points * 100) / 100;
         if (!HTMLListPoints) {
           const pointsContainer = document.createElement("span");
           pointsContainer.className = "list-points";
-          pointsContainer.textContent = points;
+          pointsContainer.textContent = roundedPoints;
           HTMLListHeader.appendChild(pointsContainer);
         } else {
-          HTMLListPoints.textContent = points;
+          HTMLListPoints.textContent = roundedPoints;
         }
       }
     }
